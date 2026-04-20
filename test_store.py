@@ -27,6 +27,8 @@ def test_store(selenium):
     assert_amount(selenium, "Błyszcząca", 2)
     assert_amount(selenium, "Matowa", 4)
     assert_amount(selenium, "Alamakota", 0)
+    assert_amount(selenium, "14", 1)
+    assert_amount(selenium, "+", 0)
 
 
 
