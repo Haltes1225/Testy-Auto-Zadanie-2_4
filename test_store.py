@@ -15,7 +15,7 @@ def assert_amount(driver, search_phrase, amount):
     if not amount >= 0:
         raise ValueError("amount must be a non negative integer")
     
-    wait=WebDriverWait(driver,60)
+    wait=WebDriverWait(driver,10)
 
     search_bar = wait.until(
         EC.element_to_be_clickable((By.ID, "searchField"))
