@@ -17,14 +17,13 @@ def print_products_css(driver, search_phrase):
     search_bar.send_keys(search_phrase)
 
     wait.until(
-        EC.visibility_of_element_located((By.CSS_SELECTOR, "section > #elements-wrapper > .element"))
+        EC.visibility_of_element_located((By.CSS_SELECTOR, "#elements-wrapper > .element"))
     )
-    elements = driver.find_elements(By.CSS_SELECTOR, "section > #elements-wrapper > .element")
-    len_elements = len(elements)
+    elements = driver.find_elements(By.CSS_SELECTOR, "#elements-wrapper > .element")
 
     print("\n")
-    for i in range(len_elements):
-        print(elements[i].text)
+    for element in elements:
+        print(element.text)
         print("\n")
 
 def test_store_css(selenium):
